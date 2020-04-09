@@ -1,12 +1,12 @@
 import "react-native";
 import React from "react";
+import { render, fireEvent, act } from "@testing-library/react-native";
 
 import AxiosMock from "axios-mock-adapter";
 import api from "../services/api";
 const apiMock = new AxiosMock(api);
 
 import App from "../App";
-import { render, fireEvent, act } from "@testing-library/react-native";
 
 const wait = (amount = 0) => {
   return new Promise((resolve) => setTimeout(resolve, amount));
